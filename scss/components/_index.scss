@@ -1,0 +1,324 @@
+/* INDEX */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: $color-fondo;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s ease all;
+
+    &.dark {
+        background: $color-tipografia;
+    }
+}
+
+.contenedorGrid {
+    width: map-get($index, width);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px auto 330px;
+}
+
+/* HEADER */
+
+header {
+    background-color: $color-base;
+    width: map-get($index, width);
+    @extend %display;
+    height: 70px;
+
+    body.dark & {
+        background: $color-fuerte;
+        box-shadow: $sombraLight;
+        a {
+            color: $color-base;
+        }
+    }
+}
+
+.nombre-empresa {
+    font-size: 40px;
+    font-weight: 900;
+
+    &:hover {
+        transform: translateY(3%);
+    }
+
+    a {
+        color: $color-fuerte;
+        text-decoration: map-get($header, style);
+
+        &:hover {
+            color: $color-tipografia;
+        }
+    }
+
+}
+
+.logo {
+    padding-left: 10px;
+}
+
+#menu {
+    list-style: map-get($header, style);
+    margin: 0;
+    @extend %display;
+
+    a {
+        font-size: 20px;
+        padding: 7px 13px;
+        font-weight: 600;
+        color: $color-fuerte;
+        text-decoration: map-get($header, style);
+
+        &:hover {
+            color: $color-tipografia;
+        }
+    }
+    body.dark & {
+        a {
+            color: $color-base;
+            &:hover {
+                color: $color-tipografia;
+            }
+        }
+    }
+    #carrito {
+    background: none;
+    color: $color-fuerte;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    margin-right: 10px;
+    font-size: 20px;
+        body.dark & {
+            color: $color-base;
+            &:hover {
+                color: $color-tipografia;
+            }
+        }
+        &:hover {
+            color: $color-tipografia;
+        }
+    }
+}
+
+//modo night
+.switch {
+    background-color: $color-fuerte;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    margin-right: 10px;
+    &::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: $color-base;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: .3s ease all;
+        box-shadow: 0px 0px 2px 2px $color-fuerte;
+    }
+    &.active {
+        background: $color-fondo;
+        &::after {
+            right: 0;
+            left: unset;
+        }
+        span {
+            color: $color-fuerte;
+        }
+    }
+    span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff;
+    }
+}
+
+/* media queries mobile menu */
+#navbar {
+    display: map-get($header, style);
+}
+
+.nombre-empresaMobile {
+    font-size: 35px;
+    font-weight: 900;
+    padding: 5px;
+    display: map-get($header, style);
+}
+
+/* MAIN CARROUSEL */
+main {
+    justify-content: center;
+    padding-bottom: 30px;
+    min-height: 100vh;
+}
+
+.containerIndex {
+    width: map-get($index, width);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#prev,
+#next {
+    &:hover {
+        background-color: $color-tipografia;
+    }
+}
+
+/* MAIN CARD (INDEX-COMPRAR) */
+.containerCard {
+    width: map-get($index, width);
+    display: flex;
+    padding-top: 30px;
+}
+
+.card {
+    width: map-get($index, width);
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: $color-base;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: $transition;
+    border: none;
+
+    body.dark & {
+        background: $color-fuerte;
+    }
+
+    &:hover {
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+        transform: translateY(3%);
+    }
+
+    .contenido {
+        padding: 15px;
+        text-align: center;
+
+        p {
+            font-weight: 400;
+            font-size: 19px;
+        }
+
+        a {
+            display: inline-block;
+            @include card($borde, $padding, $transition);
+            margin-top: 5px;
+            border-radius: 4px;
+            text-decoration: map-get($header, style);
+            color: $color-fuerte;
+
+            &:hover {
+                background-color: $color-fuerte;
+                color: $color-tipografia;
+            }
+        }
+
+        ul {
+            text-align: start;
+            font-size: 19px;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+    }
+}
+
+/* FOOTER */
+
+footer {
+    background-color: $color-base;
+    padding: 10px;
+    @extend %displaydos;
+    body.dark & {
+        background: $color-fuerte;
+    }
+}
+
+h4 {
+    body.dark & {
+        color: $color-base;
+    }
+}
+
+#punto,
+#punto-dos {
+    list-style: map-get($header, style);
+    justify-content: flex-start;
+    margin: 0;
+    body.dark & {
+        color: $color-base;
+    }
+
+
+        a {
+            text-decoration: map-get($header, style);
+            color: $color-fuerte;
+
+            &:hover {
+                color: $color-fondo;
+                body.dark & {
+                    color: $color-fondoDark;
+                }
+            }
+            body.dark & {
+                color: $color-base;
+            }
+        }
+
+    }
+
+
+.fb,
+.ig {
+    @extend %displaydos;
+
+    #iconIg,
+    #iconFb {
+        color: $color-fuerte;
+        padding-right: 2px;
+        padding-top: 3px;
+    }
+}
+
+#accordionFlushExample {
+    display: map-get($header, style);
+
+    .accordion-header {
+        background-color: $color-base;
+
+        button {
+            background-color: $color-base;
+        }
+    }
+}
+
+#columnUbi {
+    flex-flow: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+
+    .ubi {
+        font-size: 16px;
+    }
+}

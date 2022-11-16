@@ -1,0 +1,81 @@
+/* MAIN COMPRAR */
+h2,
+h3 {
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    body.dark & {
+        color: $color-base;
+    }
+}
+
+.container {
+    width: map-get($index, width);
+    display: grid;
+    text-align: center;
+}
+.selector {
+    max-width: 100%;
+    .subnombre {
+        font-size: 19px;
+        text-align: center;
+    }
+    .form-select {
+    option {
+        background-color: $color-fondo;
+        &:hover {
+            background-color: $color-fuerte;
+        }
+    }
+}
+}
+
+
+.button button {
+    border: 0px;
+    background-color: $color-fondo;
+    color: $color-tipografia;
+
+    &:hover {
+        background-color: $color-fuerte;
+        body.dark & {
+            background: $color-tipografia;
+        }
+    }
+}
+
+section {
+    @extend %displaytres;
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: all 400ms ease;
+    
+    a {
+        text-decoration: map-get($index, style);
+        color: $color-fuerte;
+        body.dark & {
+            color: $color-base;
+        }
+
+        &:hover {
+            transform: translateY(5%);
+            color: $color-tipografia;
+            body.dark & {
+                color: $color-fuerte;
+            }
+        }
+    }
+}
+
+.selector {
+    display: flex;
+    padding: 10px;
+}
+
+.card-body {
+    body.dark & {
+        background: $color-fuerte;
+    }
+}

@@ -1,0 +1,165 @@
+@media screen and (max-width: 780px) {
+
+    .contenedorGrid {
+        grid-template-rows: 70px auto auto;
+    }
+
+    .containerCard {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        flex-flow: column;
+    }
+
+    .card {
+        width: 90%;
+        margin: 15px;
+    }
+
+    .card .contenido h2 {
+        font-size: 17px;
+    }
+
+    .card .contenido p {
+        font-size: 16px;
+    }
+
+    .card .contenido ul {
+        font-size: 16px;
+    }
+
+    .card2 p {
+        font-size: 16px;
+    }
+
+    nav ul li a {
+        font-size: 17px;
+        padding: 3px 8px;
+    }
+
+    footer {
+        flex-flow: column;
+    }
+
+    #columnUbi {
+        padding-top: 20px;
+        padding-left: 30px;
+    }
+
+    .nombre-empresa {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .nombre-empresaMobile {
+        display: flex;
+        justify-content: flex-start;
+
+        a {
+            color: $color-fuerte;
+            text-decoration: map-get($header, style);
+        }
+
+    }
+
+    .tabla-column {
+        flex-flow: column;
+    }
+
+    table,
+    th,
+    td {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .ig,
+    .fb {
+        justify-content: flex-start;
+    }
+
+    #navbar {
+        display: flex;
+        body.dark & {
+            background: $color-fuerte;
+        }
+    }
+
+    #navbar-ul a {
+        color: $color-fuerte;
+
+        &:hover {
+            color: $color-tipografia;
+        }
+    }
+
+    #accordionFlushExample {
+        display: flex;
+        flex-flow: column;
+
+        .accordion-body {
+            background-color: $color-base;
+        }
+
+        button {
+            &:hover {
+                color: $color-fuerte;
+            }
+        }
+
+        #punto1,
+        #punto2 {
+            list-style: map-get($header, style);
+            justify-content: flex-start;
+            margin: 0;
+            background:$color-fuerte;
+
+            a {
+                text-decoration: map-get($header, style);
+                color: $color-fuerte;
+                body.dark & {
+                    color: $color-base;
+                }
+
+                &:hover {
+                    color: $color-fondo;
+                    body.dark & {
+                        color: $color-tipografia;
+                    }
+                }
+            }
+
+        }
+    }
+
+    #punto,
+    #punto-dos {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+    #menu {
+        display: none;
+    }
+
+    table,
+    th,
+    td {
+        padding: 10px 35px 5px 35px;
+        font-size: 14px;
+    }
+
+    img {
+        width: 400px;
+    }
+
+}

@@ -1,0 +1,43 @@
+/* MAIN CONTACTO */
+.contacto {
+        .card2 {
+            @extend %displaytres;
+                margin: 20px;
+                padding-bottom: 10px;
+                border-radius: 6px;
+                overflow: hidden;
+                background-color: rgb(245, 245, 245);
+                box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+                cursor: default;
+                body.dark & {
+                    background: $color-fuerte;
+                }
+        }
+        p {
+            font-size: 23px;
+            font-weight: 400;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        h4 {
+            font-size: 23px;
+            font-weight: 600;
+        }
+
+        .btn-group button {
+        border: 0px;
+        background-color: $color-fondo;
+        color: $color-tipografia;
+
+        &:hover {
+            background-color: $color-fuerte;
+        }
+    }
+    #contact {
+        margin: 15px;
+    }
+    }

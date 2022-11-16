@@ -1,0 +1,573 @@
+#menu, header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fb,
+.ig, footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacto .card2, section {
+  display: flex;
+  justify-content: center;
+}
+
+/* INDEX */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(221, 185, 255);
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s ease all;
+}
+body.dark {
+  background: black;
+}
+
+.contenedorGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto 330px;
+}
+
+/* HEADER */
+header {
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+  height: 70px;
+}
+body.dark header {
+  background: rgb(175, 93, 156);
+  box-shadow: rgb(200, 141, 255);
+}
+body.dark header a {
+  color: rgb(245, 245, 245);
+}
+
+.nombre-empresa {
+  font-size: 40px;
+  font-weight: 900;
+}
+.nombre-empresa:hover {
+  transform: translateY(3%);
+}
+.nombre-empresa a {
+  color: rgb(175, 93, 156);
+  text-decoration: none;
+}
+.nombre-empresa a:hover {
+  color: black;
+}
+
+.logo {
+  padding-left: 10px;
+}
+
+#menu {
+  list-style: none;
+  margin: 0;
+}
+#menu a {
+  font-size: 20px;
+  padding: 7px 13px;
+  font-weight: 600;
+  color: rgb(175, 93, 156);
+  text-decoration: none;
+}
+#menu a:hover {
+  color: black;
+}
+body.dark #menu a {
+  color: rgb(245, 245, 245);
+}
+body.dark #menu a:hover {
+  color: black;
+}
+#menu #carrito {
+  background: none;
+  color: rgb(175, 93, 156);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  margin-right: 10px;
+  font-size: 20px;
+}
+body.dark #menu #carrito {
+  color: rgb(245, 245, 245);
+}
+body.dark #menu #carrito:hover {
+  color: black;
+}
+#menu #carrito:hover {
+  color: black;
+}
+
+.switch {
+  background-color: rgb(175, 93, 156);
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  margin-right: 10px;
+}
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: rgb(245, 245, 245);
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+  box-shadow: 0px 0px 2px 2px rgb(175, 93, 156);
+}
+.switch.active {
+  background: rgb(221, 185, 255);
+}
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+.switch.active span {
+  color: rgb(175, 93, 156);
+}
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
+/* media queries mobile menu */
+#navbar {
+  display: none;
+}
+
+.nombre-empresaMobile {
+  font-size: 35px;
+  font-weight: 900;
+  padding: 5px;
+  display: none;
+}
+
+/* MAIN CARROUSEL */
+main {
+  justify-content: center;
+  padding-bottom: 30px;
+  min-height: 100vh;
+}
+
+.containerIndex {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#prev:hover,
+#next:hover {
+  background-color: black;
+}
+
+/* MAIN CARD (INDEX-COMPRAR) */
+.containerCard {
+  width: 100%;
+  display: flex;
+  padding-top: 30px;
+}
+
+.card {
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  cursor: default;
+  transition: all 400ms ease;
+  border: none;
+}
+body.dark .card {
+  background: rgb(175, 93, 156);
+}
+.card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(3%);
+}
+.card .contenido {
+  padding: 15px;
+  text-align: center;
+}
+.card .contenido p {
+  font-weight: 400;
+  font-size: 19px;
+}
+.card .contenido a {
+  display: inline-block;
+  border: 1px solid rgb(175, 93, 156);
+  padding: 10px;
+  transition: all 400ms ease;
+  margin-top: 5px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: rgb(175, 93, 156);
+}
+.card .contenido a:hover {
+  background-color: rgb(175, 93, 156);
+  color: black;
+}
+.card .contenido ul {
+  text-align: start;
+  font-size: 19px;
+  font-weight: 400;
+}
+.card .contenido h2 {
+  font-size: 25px;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgb(245, 245, 245);
+  padding: 10px;
+}
+body.dark footer {
+  background: rgb(175, 93, 156);
+}
+
+body.dark h4 {
+  color: rgb(245, 245, 245);
+}
+
+#punto,
+#punto-dos {
+  list-style: none;
+  justify-content: flex-start;
+  margin: 0;
+}
+body.dark #punto,
+body.dark #punto-dos {
+  color: rgb(245, 245, 245);
+}
+#punto a,
+#punto-dos a {
+  text-decoration: none;
+  color: rgb(175, 93, 156);
+}
+#punto a:hover,
+#punto-dos a:hover {
+  color: rgb(221, 185, 255);
+}
+body.dark #punto a:hover,
+body.dark #punto-dos a:hover {
+  color: rgb(92, 45, 81);
+}
+body.dark #punto a,
+body.dark #punto-dos a {
+  color: rgb(245, 245, 245);
+}
+
+.fb #iconIg,
+.fb #iconFb,
+.ig #iconIg,
+.ig #iconFb {
+  color: rgb(175, 93, 156);
+  padding-right: 2px;
+  padding-top: 3px;
+}
+
+#accordionFlushExample {
+  display: none;
+}
+#accordionFlushExample .accordion-header {
+  background-color: rgb(245, 245, 245);
+}
+#accordionFlushExample .accordion-header button {
+  background-color: rgb(245, 245, 245);
+}
+
+#columnUbi {
+  flex-flow: column;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+#columnUbi .ubi {
+  font-size: 16px;
+}
+
+/* MAIN COMPRAR */
+h2,
+h3 {
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+body.dark h2,
+body.dark h3 {
+  color: rgb(245, 245, 245);
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  text-align: center;
+}
+
+.selector {
+  max-width: 100%;
+}
+.selector .subnombre {
+  font-size: 19px;
+  text-align: center;
+}
+.selector .form-select option {
+  background-color: rgb(221, 185, 255);
+}
+.selector .form-select option:hover {
+  background-color: rgb(175, 93, 156);
+}
+
+.button button {
+  border: 0px;
+  background-color: rgb(221, 185, 255);
+  color: black;
+}
+.button button:hover {
+  background-color: rgb(175, 93, 156);
+}
+body.dark .button button:hover {
+  background: black;
+}
+
+section {
+  font-size: 18px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transition: all 400ms ease;
+}
+section a {
+  color: rgb(175, 93, 156);
+}
+body.dark section a {
+  color: rgb(245, 245, 245);
+}
+section a:hover {
+  transform: translateY(5%);
+  color: black;
+}
+body.dark section a:hover {
+  color: rgb(175, 93, 156);
+}
+
+.selector {
+  display: flex;
+  padding: 10px;
+}
+
+body.dark .card-body {
+  background: rgb(175, 93, 156);
+}
+
+/* MAIN TALLES */
+main {
+  min-height: 100vh;
+}
+
+.tabla-column {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 35px;
+}
+.tabla-column .table {
+  width: 40%;
+}
+body.dark .tabla-column .table {
+  background-color: black;
+}
+body.dark .tabla-column .table th, body.dark .tabla-column .table td {
+  color: rgb(221, 185, 255);
+}
+
+/* MAIN CONTACTO */
+.contacto .card2 {
+  margin: 20px;
+  padding-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+body.dark .contacto .card2 {
+  background: rgb(175, 93, 156);
+}
+.contacto p {
+  font-size: 23px;
+  font-weight: 400;
+}
+.contacto label {
+  font-size: 20px;
+  font-weight: 400;
+}
+.contacto h4 {
+  font-size: 23px;
+  font-weight: 600;
+}
+.contacto .btn-group button {
+  border: 0px;
+  background-color: rgb(221, 185, 255);
+  color: black;
+}
+.contacto .btn-group button:hover {
+  background-color: rgb(175, 93, 156);
+}
+.contacto #contact {
+  margin: 15px;
+}
+
+@media screen and (max-width: 780px) {
+  .contenedorGrid {
+    grid-template-rows: 70px auto auto;
+  }
+  .containerCard {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    flex-flow: column;
+  }
+  .card {
+    width: 90%;
+    margin: 15px;
+  }
+  .card .contenido h2 {
+    font-size: 17px;
+  }
+  .card .contenido p {
+    font-size: 16px;
+  }
+  .card .contenido ul {
+    font-size: 16px;
+  }
+  .card2 p {
+    font-size: 16px;
+  }
+  nav ul li a {
+    font-size: 17px;
+    padding: 3px 8px;
+  }
+  footer {
+    flex-flow: column;
+  }
+  #columnUbi {
+    padding-top: 20px;
+    padding-left: 30px;
+  }
+  .nombre-empresa {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .nombre-empresaMobile {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .nombre-empresaMobile a {
+    color: rgb(175, 93, 156);
+    text-decoration: none;
+  }
+  .tabla-column {
+    flex-flow: column;
+  }
+  table,
+th,
+td {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .ig,
+.fb {
+    justify-content: flex-start;
+  }
+  #navbar {
+    display: flex;
+  }
+  body.dark #navbar {
+    background: rgb(175, 93, 156);
+  }
+  #navbar-ul a {
+    color: rgb(175, 93, 156);
+  }
+  #navbar-ul a:hover {
+    color: black;
+  }
+  #accordionFlushExample {
+    display: flex;
+    flex-flow: column;
+  }
+  #accordionFlushExample .accordion-body {
+    background-color: rgb(245, 245, 245);
+  }
+  #accordionFlushExample button:hover {
+    color: rgb(175, 93, 156);
+  }
+  #accordionFlushExample #punto1,
+#accordionFlushExample #punto2 {
+    list-style: none;
+    justify-content: flex-start;
+    margin: 0;
+    background: rgb(175, 93, 156);
+  }
+  #accordionFlushExample #punto1 a,
+#accordionFlushExample #punto2 a {
+    text-decoration: none;
+    color: rgb(175, 93, 156);
+  }
+  body.dark #accordionFlushExample #punto1 a,
+body.dark #accordionFlushExample #punto2 a {
+    color: rgb(245, 245, 245);
+  }
+  #accordionFlushExample #punto1 a:hover,
+#accordionFlushExample #punto2 a:hover {
+    color: rgb(221, 185, 255);
+  }
+  body.dark #accordionFlushExample #punto1 a:hover,
+body.dark #accordionFlushExample #punto2 a:hover {
+    color: black;
+  }
+  #punto,
+#punto-dos {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  #menu {
+    display: none;
+  }
+  table,
+th,
+td {
+    padding: 10px 35px 5px 35px;
+    font-size: 14px;
+  }
+  img {
+    width: 400px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
